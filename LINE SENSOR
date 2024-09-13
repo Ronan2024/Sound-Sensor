@@ -1,14 +1,14 @@
 #include <QTRSensors.h>
 QTRSensors qtr;
 
-const uint8_t SensorCount = 1;
+const uint8_t SensorCount = 4;
 uint16_t sensorValues[SensorCount];
 
 void setup()
 {
   // configure the sensors
   qtr.setTypeAnalog();
-  qtr.setSensorPins((const uint8_t[]){A0}, SensorCount);
+  qtr.setSensorPins((const uint8_t[]){8, 7, 6, 5}, SensorCount);
   Serial.begin(9600);
 }
 
